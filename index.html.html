@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar & Electric SpA - Servicios Eléctricos y Solares</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            // Colores ajustados al tono dorado/naranja de la nueva imagen
+                            primary: '#F59E0B', // Ámbar intenso
+                            secondary: '#FBBF24', // Amarillo dorado
+                            dark: '#0F172A', // Azul marino muy oscuro (cielo de atardecer)
+                            light: '#F9FAFB' 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        brand: ['"Chakra Petch"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fuente Inter y Chakra Petch (para el logo) desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- LOGO ACTUALIZADO PARA GITHUB -->
+                    <img src="logo.png" alt="Solar & Electric SpA Logo" class="h-12 md:h-14 w-auto object-contain hover:opacity-90 transition-opacity" onerror="this.src='https://placehold.co/250x60/ffffff/F97316?text=SOLAR+%26+ELECTRIC';">
+                </div>
+
+                <!-- Menú de escritorio -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Servicios</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Nosotros</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Contacto</a>
+                </nav>
+
+                <!-- Botón de acción (escritorio) -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contacto" class="bg-brand-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-orange-600 transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="ph ph-phone-call text-lg"></i>
+                        Solicitar Presupuesto
+                    </a>
+                </div>
+
+                <!-- Botón menú móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-primary focus:outline-none p-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Inicio</a>
+                <a href="#servicios" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Servicios</a>
+                <a href="#nosotros" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Nosotros</a>
+                <a href="#contacto" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Contacto</a>
+                <a href="#contacto" class="block w-full text-center mt-4 bg-brand-primary text-white px-5 py-3 rounded-md font-bold shadow hover:bg-orange-600 transition-colors">
+                    Llamar Ahora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        
+        <section id="inicio" class="relative bg-brand-dark pt-0 pb-16 overflow-hidden">
+            <!-- Contenedor de la imagen como elemento real para que NO se recorte nada -->
+            <div class="w-full relative flex justify-center bg-brand-dark mx-auto">
+                <!-- IMAGEN DE FONDO ACTUALIZADA PARA GITHUB -->
+                <img src="fondo.png" alt="Fondo Solar & Electric SpA" class="w-full max-w-7xl h-auto block object-contain drop-shadow-2xl" onerror="this.src='https://placehold.co/1920x1080/0F172A/F97316?text=IMAGEN+DE+FONDO+(SANTIAGO)';">
+                
+                <!-- Gradiente suave para que la imagen se fusione con el fondo oscuro debajo -->
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Contenido de texto, ubicado justo debajo de la imagen para no tapar el logo -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-8 lg:pt-12">
+                <div class="text-center lg:text-left lg:w-3/4 mx-auto lg:mx-0">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-primary/20 text-brand-secondary font-semibold text-sm mb-6 border border-brand-primary/30">
+                        Expertos en Energía Solar y Eléctrica en Chile
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Soluciones Energéticas Integrales para <span class="text-brand-primary">el Futuro</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0">
+                        Desde instalaciones eléctricas residenciales hasta proyectos de energía solar. En Solar & Electric SpA brindamos calidad, eficiencia y seguridad a nivel nacional.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contacto" class="bg-brand-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors shadow-lg flex justify-center items-center gap-2">
+                            Cotizar Proyecto
+                            <i class="ph ph-arrow-right text-xl"></i>
+                        </a>
+                        <a href="#servicios" class="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors flex justify-center items-center">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento decorativo abajo adaptado al fondo gris de la siguiente sección -->
+            <div class="absolute bottom-0 w-full overflow-hidden leading-none translate-y-[1px]">
+                <svg class="relative block w-full h-12 md:h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.2,192.4,101.4,242.15,86.9,288.58,70.9,321.39,56.44Z" fill="#f9fafb"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Nuestros Servicios Especializados</h2>
+                    <div class="h-1 w-20 bg-brand-primary mx-auto rounded mb-6"></div>
+                    <p class="text-gray-600 text-lg">
+                        Ofrecemos un catálogo completo de soluciones eléctricas y de energía renovable para proyectos residenciales, comerciales e industriales.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Tarjeta Servicio 1 - Eléctrico -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                        <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors">
+                            <i class="ph ph-house-line text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Electricidad General</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Instalaciones, mantención y reparación eléctrica residencial y comercial. Tableros, cableado, detección de fallas y certificación SEC.
+                        </p>
+                        <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-orange-700">
+                            Cotizar servicio <i class="ph ph-caret-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tarjeta Servicio 2 - Solar (Nuevo) -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-brand-primary/20 group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Especialidad</div>
+                        
+                        <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors">
+                            <i class="ph ph-sun-dim text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Energía Solar Fotovoltaica</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Diseño, instalación y mantenimiento de paneles solares (sistemas On-Grid, Off-Grid e Híbridos). Ahorra energía y cuida el planeta.
+                        </p>
+                        <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-orange-700">
+                            Cotizar sistema <i class="ph ph-caret-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tarjeta Servicio 3 - Industrial -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                        <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors">
+                            <i class="ph ph-factory text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Electricidad Industrial</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Proyectos de alta y baja tensión, automatización, tableros de control y mantenimiento preventivo para el sector industrial.
+                        </p>
+                        <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-orange-700">
+                            Cotizar servicio <i class="ph ph-caret-right"></i>
+                        </a>
+                    </div>
+                    
+                     <!-- Tarjeta Servicio 4 -->
+                     <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                        <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors">
+                            <i class="ph ph-plug-charging text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cargadores Eléctricos (VE)</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Instalación profesional de puntos de carga para vehículos eléctricos (VE) en garajes privados, empresas y estacionamientos.
+                        </p>
+                        <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-orange-700">
+                            Cotizar servicio <i class="ph ph-caret-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tarjeta Servicio 5 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                        <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors">
+                            <i class="ph ph-thermometer-hot text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Climatización e Iluminación</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Soluciones de iluminación LED eficiente y conexiones eléctricas seguras para sistemas de climatización.
+                        </p>
+                        <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-orange-700">
+                            Cotizar servicio <i class="ph ph-caret-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tarjeta Servicio 6 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                        <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors">
+                            <i class="ph ph-file-text text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Certificaciones TE1 SEC</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Revisión de instalaciones, planos eléctricos y tramitación de certificados TE1 ante la SEC para empalmes nuevos o regularizaciones.
+                        </p>
+                        <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-orange-700">
+                            Cotizar servicio <i class="ph ph-caret-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="py-24 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    
+                    <!-- Imagen/Ilustración -->
+                    <div class="lg:w-1/2 relative">
+                        <div class="absolute inset-0 bg-brand-primary/20 rounded-3xl transform translate-x-4 translate-y-4"></div>
+                        <!-- Imagen actualizada relacionada con paneles solares/electricidad -->
+                        <img src="https://images.unsplash.com/photo-1509391366360-120092c43152?q=80&w=2072&auto=format&fit=crop" alt="Instalación de paneles solares" class="rounded-3xl relative z-10 w-full h-auto object-cover shadow-2xl aspect-video lg:aspect-square object-center">
+                        
+                        <!-- Tarjeta flotante (Stats) -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block border border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-brand-secondary/20 p-3 rounded-full text-brand-primary">
+                                    <i class="ph ph-check-circle text-3xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-3xl font-bold text-gray-900">Cobertura</p>
+                                    <p class="text-sm text-gray-500 font-medium">Nacional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contenido Texto -->
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Expertos Comprometidos con el Futuro Energético</h2>
+                        <p class="text-gray-600 text-lg mb-8">
+                            En <strong>Solar & Electric SpA</strong> combinamos la experiencia en instalaciones eléctricas tradicionales con la vanguardia de la energía solar. Nuestro objetivo es brindar soluciones eficientes y sustentables a lo largo del país.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <!-- Razón 1 -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center text-brand-primary">
+                                    <i class="ph ph-certificate text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-1">Técnicos Certificados SEC</h4>
+                                    <p class="text-gray-600">Nuestro personal cuenta con las licencias y capacitaciones necesarias según la normativa chilena vigente.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Razón 2 -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center text-brand-secondary">
+                                    <i class="ph ph-leaf text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-1">Enfoque Sustentable</h4>
+                                    <p class="text-gray-600">Impulsamos la transición energética ofreciendo instalaciones fotovoltaicas de alta calidad y rendimiento.</p>
+                                </div>
+                            </div>
+
+                            <!-- Razón 3 -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+                                    <i class="ph ph-shield-check text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-1">Garantía de Servicio</h4>
+                                    <p class="text-gray-600">Todos nuestros trabajos cuentan con garantía. Usamos materiales e inversores de primera calidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-24 bg-brand-dark text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    
+                    <!-- Información de Contacto -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Hablamos de tu próximo proyecto?</h2>
+                        <p class="text-gray-300 mb-10 text-lg">
+                            Contáctanos para solicitar una evaluación técnica o un presupuesto sin compromiso. En Solar & Electric SpA estamos listos para asesorarte.
+                        </p>
+
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-800 p-3 rounded-lg text-brand-primary">
+                                    <i class="ph ph-map-pin text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Ubicación</h4>
+                                    <p class="text-gray-400">Atención en todo Chile. Oficina central: [Tu Dirección].</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-800 p-3 rounded-lg text-brand-primary">
+                                    <i class="ph ph-phone text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Teléfono</h4>
+                                    <p class="text-gray-400">+56 9 1234 5678</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-800 p-3 rounded-lg text-brand-primary">
+                                    <i class="ph ph-envelope-simple text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Correo Electrónico</h4>
+                                    <p class="text-gray-400">contacto@solarelectric.cl</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario -->
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl text-gray-800">
+                        <h3 class="text-2xl font-bold mb-6 text-center text-brand-dark">Envíanos un Mensaje</h3>
+                        
+                        <form onsubmit="event.preventDefault(); alert('En un entorno real, este formulario enviaría un correo a Solar & Electric SpA.');" class="space-y-4">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre / Empresa</label>
+                                <input type="text" id="nombre" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-all" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                                    <input type="tel" id="telefono" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-all" placeholder="Tu número" required>
+                                </div>
+                                <div>
+                                    <label for="servicio" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Servicio</label>
+                                    <select id="servicio" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-all bg-white">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="solar">Proyecto Solar (Paneles)</option>
+                                        <option value="electrico">Instalación Eléctrica</option>
+                                        <option value="certificacion">Certificación TE1</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Detalles del proyecto</label>
+                                <textarea id="mensaje" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-all resize-none" placeholder="Describe brevemente lo que necesitas (consumo mensual, tipo de techo, etc.)..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-primary text-white font-bold py-4 rounded-lg hover:bg-orange-600 transition-colors shadow-md flex justify-center items-center gap-2">
+                                <i class="ph ph-paper-plane-right text-xl"></i>
+                                Enviar Solicitud
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Columna 1: Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="ph-fill ph-lightning text-brand-primary text-2xl"></i>
+                        <span class="font-bold text-xl text-white tracking-tight">SOLAR & <span class="text-brand-primary">ELECTRIC SPA</span></span>
+                    </div>
+                    <p class="text-sm max-w-sm mb-6">
+                        Impulsando el desarrollo energético de Chile a través de soluciones eléctricas seguras y proyectos de energía solar sustentables.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors bg-gray-800 p-2 rounded-full"><i class="ph ph-facebook-logo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors bg-gray-800 p-2 rounded-full"><i class="ph ph-instagram-logo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors bg-gray-800 p-2 rounded-full"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-brand-primary transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-primary transition-colors">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-brand-primary transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#contacto" class="hover:text-brand-primary transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Horario -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Horario Comercial</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between border-b border-gray-800 pb-1"><span>Lunes - Viernes:</span> <span>08:30 - 18:00</span></li>
+                        <li class="flex justify-between border-b border-gray-800 pb-1"><span>Sábado:</span> <span>09:00 - 13:00</span></li>
+                        <li class="flex justify-between text-brand-primary font-medium pt-1"><span>Domingo:</span> <span>Cerrado</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Solar & Electric SpA. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Tu Empresa Eléctrica. Todos los derechos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 z-50 flex items-center justify-center">
+        <i class="ph ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- Lógica del Menú Móvil -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')){
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            } else {
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+            }
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            });
+        });
+    </script>
+</body>
+</html>
