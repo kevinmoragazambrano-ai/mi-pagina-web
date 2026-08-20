@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar & Electric SpA - Servicios Eléctricos y Solares</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#F59E0B', 
+                            secondary: '#FBBF24', 
+                            dark: '#0F172A', 
+                            light: '#F9FAFB' 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        brand: ['"Chakra Petch"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="antialiased bg-fixed bg-cover bg-center bg-no-repeat" style="background-image: url('fondo-general.jpg'), url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2000&auto=format&fit=crop');">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="Copilot_20260608_102231.png" alt="Solar & Electric SpA Logo" class="h-12 md:h-14 w-auto object-contain hover:opacity-90 transition-opacity" onerror="this.src='https://placehold.co/250x60/ffffff/F97316?text=SOLAR+%26+ELECTRIC';">
+                </div>
+
+                <!-- 🟢 TEXTOS EDITABLES: Nombres de los enlaces del menú superior -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Servicios</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Nosotros</a>
+                                       <a href="#contacto" class="text-gray-600 hover:text-brand-primary font-medium transition-colors">Contacto</a>
+                </nav>
+
+                <div class="hidden md:flex items-center">
+                    <a href="#contacto" class="bg-brand-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-orange-600 transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="ph ph-phone-call text-lg"></i>
+                        <!-- 🟢 TEXTO EDITABLE: Texto del botón principal de arriba -->
+                        Solicitar Presupuesto
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-primary focus:outline-none p-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Inicio</a>
+                <a href="#servicios" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Servicios</a>
+                <a href="#nosotros" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Nosotros</a>
+                <a href="#contacto" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-primary">Contacto</a>
+                <a href="#contacto" class="block w-full text-center mt-4 bg-brand-primary text-white px-5 py-3 rounded-md font-bold shadow hover:bg-orange-600 transition-colors">
+                    Llamar Ahora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        
+        <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[80vh]">
+            
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                <source src="fondo.mp4" type="video/mp4">
+                <source src="https://cdn.pixabay.com/video/2021/08/25/86241-592881186_large.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/70 to-brand-dark/30 z-0"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="text-center lg:text-left lg:w-2/3 mx-auto lg:mx-0">
+                    <!-- 🟢 TEXTO EDITABLE: Etiqueta pequeña sobre el título principal -->
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-primary/20 text-brand-secondary font-semibold text-sm mb-6 border border-brand-primary/30 backdrop-blur-sm">
+                        Expertos en Energía Solar y Eléctrica en Chile
+                    </span>
+                    
+                    <!-- 🟢 TEXTO EDITABLE: Título Gigante de la página (El texto en span queda naranja) -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Soluciones Energéticas <span class="text-brand-primary">Integrales</span>
+                    </h1>
+                    
+                    <!-- 🟢 TEXTO EDITABLE: Párrafo debajo del título principal -->
+                    <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto lg:mx-0 drop-shadow-md">
+                        Desde instalaciones eléctricas residenciales hasta proyectos de energía solar. En Solar & Electric SpA brindamos calidad, eficiencia y seguridad.
+                    </p>
+                    
+                    <!-- 🟢 TEXTO EDITABLE: Botones principales -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contacto" class="bg-brand-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors shadow-lg flex justify-center items-center gap-2">
+                            Cotizar Proyecto
+                            <i class="ph ph-arrow-right text-xl"></i>
+                        </a>
+                        <a href="#servicios" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors flex justify-center items-center">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 w-full overflow-hidden leading-none z-10 translate-y-[1px]">
+                <svg class="relative block w-full h-12 md:h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.2,192.4,101.4,242.15,86.9,288.58,70.9,321.39,56.44Z" fill="rgba(249, 250, 251, 0.8)"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-24 bg-gray-50/0 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <!-- 🟢 TEXTO EDITABLE: Título de la sección de Servicios -->
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4 drop-shadow-sm">Nuestros Servicios Especializados</h2>
+                    <div class="h-1 w-20 bg-brand-primary mx-auto rounded mb-6 shadow-sm"></div>
+                    <!-- 🟢 TEXTO EDITABLE: Párrafo de la sección de Servicios -->
+                    <p class="text-gray-800 font-medium text-lg drop-shadow-sm">
+                        Ofrecemos un catálogo completo de soluciones eléctricas y de energía renovable para proyectos residenciales, comerciales e industriales.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Tarjeta 1 -->
+                    <div class="relative rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-brand-primary/40 transition-all duration-300 border border-gray-700 group overflow-hidden flex flex-col min-h-[450px]">
+                        <img src="2025-05-28 161650.PNG" alt="Tablero Eléctrico" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700 z-0" onerror="this.src='https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800&auto=format&fit=crop';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40 z-0"></div>
+                        
+                        <div class="relative z-10 flex flex-col flex-grow p-8">
+                            <div class="w-16 h-16 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors border border-white/10">
+                                <i class="ph ph-house-line text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Proyectos Electricos</h3>
+                            <p class="text-gray-300 mb-8 flex-grow text-base leading-relaxed">
+                                Desarrollo de proyectos electricos habitacional, comercial y terciarios.
+                            </p>
+                            <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-brand-secondary transition-colors mt-auto text-lg w-max">
+                                Cotizar servicio <i class="ph ph-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="relative rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-brand-primary/40 transition-all duration-300 border border-brand-primary/50 group overflow-hidden flex flex-col min-h-[450px]">
+                        <div class="absolute top-0 right-0 bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-20 shadow-md">Especialidad</div>
+                        
+                        <img src="Captura de pantalla 2024-11-27 171335_12.jpg" alt="Paneles Solares" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700 z-0" onerror="this.src='https://images.unsplash.com/photo-1509391366360-120092c43152?q=80&w=800&auto=format&fit=crop';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40 z-0"></div>
+                        
+                        <div class="relative z-10 flex flex-col flex-grow p-8">
+                            <div class="w-16 h-16 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors border border-white/10">
+                                <i class="ph ph-sun-dim text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Energía Solar Fotovoltaica</h3>
+                            <p class="text-gray-300 mb-8 flex-grow text-base leading-relaxed">
+                                Diseño, instalación y limpieza de paneles solares . sistema conectado a la red electrica, hibrida con respaldo energetico y aislada de la red, Ahorra energía y genera plusvalia a tu propiedad.
+                            </p>
+                            <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-brand-secondary transition-colors mt-auto text-lg w-max">
+                                Cotizar sistema <i class="ph ph-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="relative rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-brand-primary/40 transition-all duration-300 border border-gray-700 group overflow-hidden flex flex-col min-h-[450px]">
+                        <img src="empalmes.jpg" alt="Industria" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700 z-0" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40 z-0"></div>
+                        
+                        <div class="relative z-10 flex flex-col flex-grow p-8">
+                            <div class="w-16 h-16 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors border border-white/10">
+                                <i class="ph ph-factory text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Gestion Empalmes y tarifas electricas</h3>
+                            <p class="text-gray-300 mb-8 flex-grow text-base leading-relaxed">
+                                Gestionamos empalmes y tarifas eléctricas. Nos encargamos de la tramitación ante la SEC y compañías eléctricas.
+                            </p>
+                            <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-brand-secondary transition-colors mt-auto text-lg w-max">
+                                Cotizar servicio <i class="ph ph-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                     <!-- Tarjeta 4 -->
+                     <div class="relative rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-brand-primary/40 transition-all duration-300 border border-gray-700 group overflow-hidden flex flex-col min-h-[450px]">
+                        <img src="Waybox.jpg" alt="Cargador VE" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700 z-0" onerror="this.src='https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800&auto=format&fit=crop';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40 z-0"></div>
+                        
+                        <div class="relative z-10 flex flex-col flex-grow p-8">
+                            <div class="w-16 h-16 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors border border-white/10">
+                                <i class="ph ph-plug-charging text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Cargadores Eléctricos (VE)</h3>
+                            <p class="text-gray-300 mb-8 flex-grow text-base leading-relaxed">
+                                Instalación  de puntos de carga para vehículos eléctricos (VE) con certificacion TE-6.                            </p>
+                            <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-brand-secondary transition-colors mt-auto text-lg w-max">
+                                Cotizar servicio <i class="ph ph-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="relative rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-brand-primary/40 transition-all duration-300 border border-gray-700 group overflow-hidden flex flex-col min-h-[450px]">
+                        <img src="images.jpg" alt="Climatización" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700 z-0" onerror="this.src='https://images.unsplash.com/photo-1585250047395-88be7d76ec43?q=80&w=800&auto=format&fit=crop';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40 z-0"></div>
+                        
+                        <div class="relative z-10 flex flex-col flex-grow p-8">
+                            <div class="w-16 h-16 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors border border-white/10">
+                                <i class="ph ph-thermometer-hot text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Climatización</h3>
+                            <p class="text-gray-300 mb-8 flex-grow text-base leading-relaxed">
+                                Venta e instalacion de sistemas clima.
+                            </p>
+                            <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-brand-secondary transition-colors mt-auto text-lg w-max">
+                                Cotizar servicio <i class="ph ph-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="relative rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-brand-primary/40 transition-all duration-300 border border-gray-700 group overflow-hidden flex flex-col min-h-[450px]">
+                        <img src="qq.jpg" alt="Planos eléctricos" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700 z-0" onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40 z-0"></div>
+                        
+                        <div class="relative z-10 flex flex-col flex-grow p-8">
+                            <div class="w-16 h-16 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors border border-white/10">
+                                <i class="ph ph-file-text text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Evaluación y verificacion de Proyectos</h3>
+                            <p class="text-gray-300 mb-8 flex-grow text-base leading-relaxed">
+                                Revision As-built y verificacion y mediciones reglamentarias para declaracion SEC.
+                            </p>
+                            <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-brand-secondary transition-colors mt-auto text-lg w-max">
+                                Cotizar servicio <i class="ph ph-caret-right"></i>
+                            </a>
+                        </div>
+                    </div> 
+                    <!-- ☝️ AQUÍ TERMINA TU SEXTA TARJETA ☝️ -->
+
+
+                    <!-- 👇 LA TARJETA 7 DEBE IR EXACTAMENTE AQUÍ 👇 -->
+                    <div class="relative rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-brand-primary/40 transition-all duration-300 border border-gray-700 group overflow-hidden flex flex-col min-h-[450px]">
+                        <img src="seguridad.jpg" alt="Cámaras de seguridad y cercos" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700 z-0" onerror="this.src='https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40 z-0"></div>
+                        
+                        <div class="relative z-10 flex flex-col flex-grow p-8">
+                            <div class="w-16 h-16 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors border border-white/10">
+                                <i class="ph ph-shield-check text-4xl text-brand-primary group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Sistemas de Seguridad</h3>
+                            <p class="text-gray-300 mb-8 flex-grow text-base leading-relaxed">
+                                Instalación de cercos eléctricos, cámaras de vigilancia (CCTV) y sistemas de monitoreo para proteger tu hogar o empresa con la más alta tecnología.
+                            </p>
+                            <a href="#contacto" class="text-brand-primary font-semibold flex items-center gap-1 hover:text-brand-secondary transition-colors mt-auto text-lg w-max">
+                                Cotizar servicio <i class="ph ph-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+            </div> <!-- Cierre del contenedor max-w-7xl -->
+</section>
+        <section id="nosotros" class="py-24 bg-white/0 backdrop-blur-md relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4 drop-shadow-sm">Expertos Comprometidos con el Futuro Energético</h2>
+            <div class="h-1 w-20 bg-brand-primary mx-auto rounded mb-6 shadow-sm"></div>
+            <p class="text-gray-800 font-medium text-lg drop-shadow-sm">
+                En <strong>Solar & Electric SpA</strong> combinamos la experiencia en instalaciones eléctricas tradicionales con la vanguardia de la energía solar. Nuestro objetivo es brindar soluciones eficientes y sustentables.
+            </p>
+        </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white/95 rounded-2xl hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden group text-center shadow-lg">
+                        <div class="w-full h-56 overflow-hidden relative">
+                            <img src="sec.jpg" alt="Técnicos Certificados SEC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1581092921461-7d3120fa4fd7?q=80&w=800&auto=format&fit=crop';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8 flex flex-col items-center flex-grow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Técnicos Certificados SEC</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                Nuestro personal cuenta con las licencias y capacitaciones necesarias según la estricta normativa chilena vigente, garantizando instalaciones seguras.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/95 rounded-2xl hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden group text-center shadow-lg">
+                        <div class="w-full h-56 overflow-hidden relative">
+                            <img src="sos.jpg" alt="Enfoque Sustentable" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1509391366360-120092c43152?q=80&w=800&auto=format&fit=crop';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8 flex flex-col items-center flex-grow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Enfoque Sustentable</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                Impulsamos la transición energética del país ofreciendo instalaciones fotovoltaicas de alta calidad, promoviendo el ahorro y cuidando el planeta.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/95 rounded-2xl hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden group text-center shadow-lg">
+                        <div class="w-full h-56 overflow-hidden relative">
+                            <img src="garantia.jpg" alt="Garantía de Servicio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800&auto=format&fit=crop';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8 flex flex-col items-center flex-grow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Garantía de Servicio</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                Todos nuestros trabajos cuentan con garantía real. Usamos materiales, cables e inversores de primera calidad para que tu inversión dure décadas.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<section id="contacto" class="py-24 bg-white/100 backdrop-blur-lg relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <!-- Título de la sección -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4 drop-shadow-sm">Cotiza tu Proyecto</h2>
+                    <div class="h-1 w-20 bg-brand-primary mx-auto rounded mb-6 shadow-sm"></div>
+                    <p class="text-gray-800 font-medium text-lg drop-shadow-sm">
+                        ¿Necesitas una instalación eléctrica o un proyecto solar? Contáctanos directamente y un especialista te atenderá a la brevedad.
+                    </p>
+                </div>
+
+                <!-- Tarjeta de Contacto Centrada (Sin Formulario) -->
+                <div class="max-w-2xl mx-auto bg-brand-dark rounded-3xl shadow-2xl overflow-hidden border border-gray-800 relative">
+                    <div class="p-10 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+                        
+                        <!-- Efectos de luces de fondo -->
+                        <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-brand-primary/10 blur-3xl"></div>
+                        <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-brand-secondary/10 blur-3xl"></div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-3xl font-bold mb-6 text-center">Información de Contacto</h3>
+                            <p class="text-gray-300 mb-10 text-center text-lg">
+                                Estamos disponibles para resolver tus dudas y ofrecerte la mejor solución energética para tu hogar o empresa en todo Chile.
+                            </p>
+                            
+                            <!-- Tus datos actualizados -->
+                            <div class="space-y-8 max-w-md mx-auto">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                        <i class="ph ph-phone text-3xl text-brand-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400">Llámanos</p>
+                                        <p class="font-semibold text-xl">+56 9 3172 2463</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                        <i class="ph ph-envelope-simple text-3xl text-brand-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400">Escríbenos</p>
+                                        <p class="font-semibold text-lg hover:text-brand-primary transition-colors"><a href="mailto:presupuestoelectricos@gmail.com">presupuestoelectricos@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                        <i class="ph ph-map-pin text-3xl text-brand-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400">Ubicación</p>
+                                        <p class="font-semibold text-lg">Santiago, Región Metropolitana, Chile</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de WhatsApp gigante y centrado -->
+                        <div class="mt-12 relative z-10 max-w-md mx-auto w-full">
+                            <a href="https://wa.me/56931722463" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all w-full justify-center shadow-lg hover:shadow-green-500/30 hover:-translate-y-1">
+                                <i class="ph ph-whatsapp-logo text-3xl"></i>
+                                Chatear por WhatsApp
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="ph-fill ph-lightning text-brand-primary text-2xl"></i>
+                        <span class="font-bold text-xl text-white tracking-tight">SOLAR & <span class="text-brand-primary">ELECTRIC SPA</span></span>
+                    </div>
+                    <p class="text-sm max-w-sm mb-6">
+                        Impulsando el desarrollo energético de Chile a través de soluciones eléctricas seguras y proyectos de energía solar sustentables.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-brand-primary transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-primary transition-colors">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-brand-primary transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#contacto" class="hover:text-brand-primary transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Horario Comercial</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between border-b border-gray-800 pb-1"><span>Lunes - Viernes:</span> <span>08:30 - 18:00</span></li>
+                        <li class="flex justify-between border-b border-gray-800 pb-1"><span>Sábado:</span> <span>09:00 - 13:00</span></li>
+                        <li class="flex justify-between text-brand-primary font-medium pt-1"><span>Domingo:</span> <span>Cerrado</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Solar & Electric SpA. Todos los derechos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 z-50 flex items-center justify-center">
+        <i class="ph ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- Lightbox de Galería -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-brand-primary focus:outline-none transition-colors z-50">
+            <i class="ph ph-x text-4xl"></i>
+        </button>
+        <div class="relative w-full h-full flex items-center justify-center p-4">
+            <img id="lightbox-img" src="" alt="Proyecto ampliado" class="max-h-[90vh] max-w-[95vw] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+        </div>
+    </div>
+
+    <script>
+        // Menú Móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')){
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            } else {
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+            }
+        });
+
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            });
+        });
+
+        // Lightbox para Galería
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(imgSrc) {
+            lightboxImg.src = imgSrc; 
+            lightbox.classList.remove('hidden');
+            
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300); 
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target.id !== 'lightbox-img') {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
